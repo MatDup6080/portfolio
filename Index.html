@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel - Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Professionnelle -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo et marque -->
+        <div class="nav-brand">
+            <div class="logo-wrapper">
+                <i class="fas fa-code logo-icon"></i>
+                <span class="logo-text">MD  </span>
+            </div>
+        </div>
+
+
+
+        <!-- Menu principal -->
+        <ul class="nav-menu">
+            <li><a href="#accueil" class="nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a></li>
+            <li><a href="#parcours" class="nav-link">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Mon Parcours</span>
+            </a></li>
+            <li><a href="#projets" class="nav-link">
+                <i class="fas fa-briefcase"></i>
+                <span>Projets</span>
+            </a></li>
+            <li><a href="#competences" class="nav-link">
+                <i class="fas fa-cogs"></i>
+                <span>Compétences</span>
+            </a></li>
+            <li><a href="#contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a></li>
+            <li><a href="Veille_technologique/Veille_technologique.html" class="nav-link">
+                <i class="fas fa-brain"></i>
+                <span>Veille_technologique</span>
+            </a></li>
+        </ul>
+
+        <!-- Actions supplémentaires -->
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="#contact" class="btn btn-primary btn-small">
+                <i class="fas fa-paper-plane"></i>
+                <span>Me contacter</span>
+            </a>
+        </div>
+
+        <!-- Menu mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Menu mobile (pour écrans petits) -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <div class="logo-wrapper">
+            <i class="fas fa-code logo-icon"></i>
+            <span class="logo-text">DUP-M</span>
+        </div>
+        <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-menu">
+        <li><a href="#accueil" class="mobile-nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Accueil</span>
+        </a></li>
+        <li><a href="#parcours" class="mobile-nav-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Mon Parcours</span>
+        </a></li>
+        <li><a href="#projets" class="mobile-nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Projets</span>
+        </a></li>
+        <li><a href="#competences" class="mobile-nav-link">
+            <i class="fas fa-cogs"></i>
+            <span>Compétences</span>
+        </a></li>
+        <li><a href="#contact" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+        <a href="#contact" class="btn btn-primary btn-block">
+            <i class="fas fa-paper-plane"></i>
+            <span>Me contacter</span>
+        </a>
+    </div>
+</div>
+
+<!-- Contenu principal -->
+<main class="main-content">
+    <!-- Section Héros -->
+    <section class="hero-section" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="welcome-badge">
+                    <span class="badge-text">DEVELOPPEUR FULL-STACK</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line">Bonjour, je suis</span>
+                    <span class="title-line accent">Mathieu Dupressoir</span>
+                </h1>
+
+                <h2 class="hero-subtitle">
+                    <span class="typing-text" id="typingText">Développeur Web & Mobile</span>
+                    <span class="cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    Passionné par les technologies web, je crée des expériences numériques performantes
+                    et intuitives. Spécialisé en développement full-stack.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Années d'études dans l'informatique</div>
+                    </div>
+
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#parcours" class="btn btn-primary">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Mon Parcours</span>
+                    </a>
+                    <a href="doc/CV_DUPRESSOIR_Mathieu.pdf" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        <span>Télécharger CV</span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Section Parcours -->
+    <section class="parcours-section" id="parcours">
+        <div class="section-header">
+            <h2 class="section-title">Mon Parcours</h2>
+            <p class="section-subtitle">De mes débuts scolaires à mes études supérieures</p>
+        </div>
+
+        <div class="parcours-grid">
+                <!-- Carte Lycée -->
+            <div class="parcours-card">
+                <div class="parcours-header">
+                    <div class="parcours-year">2019-2021</div>
+                    <h3 class="parcours-title">Lycée Charles de Gaulle</h3>
+                    <p class="parcours-location">Compiègne (60)</p>
+                </div>
+                <div class="parcours-body">
+                    <p class="parcours-description">
+                        Obtention du baccalauréat avec spécialisation en sciences
+                        et approfondissement en informatique.
+                    </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">NSI</span>
+                    </div>
+                    <div class="parcours-image-link">
+                        <a href="https://lpo-lyc-metier-charles-de-gaulle-compiegne.60.ac-amiens.fr/"
+                           target="_blank" class="image-link-wrapper">
+                            <img src="img/lycee.jpg" alt="Lycée Charles de Gaulle" class="parcours-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visiter le site du lycée</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Licence -->
+            <div class="parcours-card">
+                <div class="parcours-header">
+                    <div class="parcours-year">2021-2024</div>
+                    <h3 class="parcours-title">Licence Informatique</h3>
+                    <p class="parcours-location">Université de Picardie Jules Verne (UPJV) - Amiens</p>
+                </div>
+                <div class="parcours-body">
+                    <div class="parcours-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><strong>2021-2022:</strong> Licence Informatique L1</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><strong>2022-2023:</strong> Licence Informatique L2</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><strong>2023-2024:</strong> Licence Informatique L3</span>
+                        </div>
+                    </div>
+                    <p class="parcours-description">
+                        Formation complète en informatique avec spécialisation en
+                        développement web, bases de données et architectures logicielles.
+                    </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">Développement Web</span>
+                        <span class="skill-tag">Base de données: Mysql et Oracle</span>
+                        <span class="skill-tag">Langage assembleur</span>
+                        <span class="skill-tag">Langage C </span>
+                        <span class="skill-tag">Programmation Objet: JAVA </span>
+                        <span class="skill-tag">Système d'exploitation LINUX </span>
+                        <span class="skill-tag">Gestion de projets</span>
+                    </div>
+                    <div class="parcours-image-link">
+                        <a href="https://sciences.u-picardie.fr/accueil-ufr-sciences"
+                           target="_blank" class="image-link-wrapper">
+                            <img src="img/fac.jpg" alt="Université de Picardie Jules Verne" class="parcours-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visiter le site de l'UPJV</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte BTS SIO -->
+            <div class="parcours-card">
+                <div class="parcours-header">
+                    <div class="parcours-year">2024-2025</div>
+                    <h3 class="parcours-title">BTS SIO</h3>
+                    <p class="parcours-subtitle">Services Informatiques aux Organisations</p>
+                    <p class="parcours-location">Lycée Saint-Rémi - Amiens</p>
+                </div>
+                <div class="parcours-body">
+                    <p class="parcours-description">
+                        Spécialisation SLAM (Solutions Logicielles et Applications Métiers).
+                        Formation axée sur le développement d'applications, la gestion
+                        de projets informatiques et la cybersécurité.
+                    </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">Développement Web</span>
+                        <span class="skill-tag">Base de données</span>
+                        <span class="skill-tag">Cybersécurité</span>
+                        <span class="skill-tag">Gestion de projets</span>
+                    </div>
+                    <div class="parcours-image-link">
+                        <a href="#" target="_blank" class="image-link-wrapper">
+                            <img src="img/bts.jpg" alt="BTS SIO - Lycée Saint-Rémi" class="parcours-img">
+                            <div class="image-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visiter le site</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Accès Rapide -->
+    <section class="quick-access" id="projets">
+        <div class="section-header">
+            <h2 class="section-title">Mes projets</h2>
+            <p class="section-subtitle">Découvrez une sélection de mes projets les plus significatifs</p>
+        </div>
+
+        <div class="access-grid">
+            <a href="http://starwars/" class="access-card">
+                <div class="card-icon">
+                    <i class="fas fa-space-shuttle"></i>
+                </div>
+                <h3 class="card-title">STARS WARS</h3>
+                <p class="card-description">
+                    Site web STAR WARS réalisé dans le cadre d'un projet scolaire (NSI Première année).
+                    Le site nous présente les personnages, les bestiaires, vaisseaux et les 3 derniers films de la saga.
+                </p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="#" class="access-card">
+                <div class="card-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="card-title"></h3>
+                <p class="card-description">
+                    Application React Native pour la gestion de tâches avec synchronisation
+                    cloud et notifications push.
+                </p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section class="tech-stack" id="competences">
+        <div class="section-header">
+            <h2 class="section-title">Mes Compétences</h2>
+            <p class="section-subtitle">Technologies et outils que j'utilise au quotidien</p>
+        </div>
+
+        <div class="tech-grid">
+            <div class="tech-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Travaillons Ensemble</h2>
+            <p class="section-subtitle">Discutons de votre prochain projet</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>mathieu.dupressoir03@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <p>+33 6 XX XX XX XX</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Localisation</h3>
+                        <p>France, Compiègne 60</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>DUP-M</span>
+            </div>
+            <p class="footer-description">
+                Développeur full-stack passionné par la création de solutions
+                web innovantes et performantes.
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:mathieu.dupressoir03@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-title">Navigation</h3>
+            <ul class="footer-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#parcours">Mon Parcours</a></li>
+                <li><a href="#projets">Mes projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-contact">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>mathieu.dupressoir03@gmail.com</span>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>France</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025-2026 Portfolio Mathieu Dupressoir. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<!-- Script JavaScript externe -->
+<script src="portfolio.js"></script>
+</body>
+</html>
