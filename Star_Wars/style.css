@@ -1,0 +1,85 @@
+body {  
+/*background-color:rgb(26, 25, 21);*/
+color:yellow;
+font-family:Comic Sans MS
+}
+div.a {
+  font-size: 20px;
+  text-align:center;
+}
+div.b {
+  font-size: 30px;
+  text-align:center;
+}
+div.c {
+  font-size: 30px;
+  text-align:center;
+}
+div.d {
+  font-size: 40px;
+  text-align:center;
+}
+div.e {
+  font-size: 50px;
+  text-align:center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.left {
+  display: block;
+  /*margin-left: auto;
+    margin-right: auto;*/
+  width: 25%;
+}
+.bg-image {
+  /* The image used */
+  background-image: url("images/background-étoiles.jpg");
+
+  /* Add the blur effect */
+  /*filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+    /*background-size: cover;*/
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #e2e215;
+}
+
+.flotte_g {
+  float:left;
+
+}
