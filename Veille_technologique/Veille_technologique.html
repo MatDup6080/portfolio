@@ -32,7 +32,12 @@
             </a>
         </div>
 
-        <ul class="nav-menu">
+        <div class="nav-menu-wrapper">
+            <button class="nav-arrow nav-arrow--left" id="navArrowLeft" aria-label="Défiler à gauche">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+        <ul class="nav-menu" id="navMenu">
             <li><a href="../index.html" class="nav-link">
                 <i class="fas fa-user-circle"></i>
                 <span>Portfolio</span>
@@ -71,8 +76,15 @@
             </a></li>
         </ul>
 
+            <button class="nav-arrow nav-arrow--right" id="navArrowRight" aria-label="Défiler à droite">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
         <div class="nav-actions">
-            
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
             <a href="https://gemini.google.com/app" target="_blank" rel="noopener" class="btn btn-primary btn-small">
                 <i class="fas fa-robot"></i>
                 <span>Discuter avec une IA</span>
@@ -809,7 +821,7 @@
                 <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:mathieu.dupressoir03@gmail.com" class="social-link" aria-label="Email">
+                <a href="/cdn-cgi/l/email-protection#452824312d2c20306b213035372036362a2c377576052228242c296b262a28" class="social-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -834,7 +846,7 @@
             <ul class="footer-contact">
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <span><a href="mailto:mathieu.dupressoir03@gmail.com">mathieu.dupressoir03@gmail.com</a></span>
+                    <span><a href="/cdn-cgi/l/email-protection#375a56435f5e52421953424745524444585e45070477505a565e5b1954585a"><span class="__cf_email__" data-cfemail="4d202c39252428386329383d3f283e3e22243f7d7e0d2a202c2421632e2220">[email&#160;protected]</span></a></span>
                 </li>
                 <li>
                     <i class="fas fa-map-marker-alt"></i>
@@ -848,11 +860,4 @@
         </div>
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Veille Technologique BTS SIO SLAM</p>
-    </div>
-</footer>
-
-<script src="Veille_technologique.js"></script>
-</body>
-</html>
+    <div class="fo
