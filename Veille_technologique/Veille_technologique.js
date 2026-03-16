@@ -75,6 +75,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// ===== FLÈCHES DE NAVIGATION DU MENU =====
+const navMenu    = document.getElementById('navMenu');
+const arrowLeft  = document.getElementById('navArrowLeft');
+const arrowRight = document.getElementById('navArrowRight');
+const scrollStep = 180;
+
+function updateArrows() {
+    if (!navMenu || !arrowLeft || !arrowRight) return;
+    const atStart = navMenu.scrollLeft <= 4;
+    const atEnd   = navMenu.scrollLeft + navMenu.clientWidth >= navMenu.scrollWidth - 4;
+    arrowLeft.style.opacity  = atStart ? '0.25' : '1';
+    arrowRight.style.opacity = atEnd   ? '0.25' : '1';
+}
+
+if (navMenu) {
+    arrowLeft.addEventListener('click',  () => navMenu.scrollBy({ left: -scrollStep, behavior: 'smooth' }));
+    arrowRight.addEventListener('click', () => navMenu.scrollBy({ left:  scrollStep, behavior: 'smooth' }));
+    navMenu.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+}
+
+
 // ===== HIGHLIGHT DU MENU AU DÉFILEMENT =====
 const sections    = document.querySelectorAll('section[id]');
 const navLinks    = document.querySelectorAll('.nav-link');
