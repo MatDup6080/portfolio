@@ -14,10 +14,29 @@
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand">
-            <div class="logo-wrapper">
-                <i class="fas fa-code logo-icon"></i>
-                <span class="logo-text">MD</span>
-            </div>
+            <a href="#accueil" class="logo-wrapper" aria-label="Accueil">
+                <!-- Logo hexagone — version navbar -->
+                <svg class="logo-svg" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="lg-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#4361ee"/>
+                            <stop offset="100%" stop-color="#7209b7"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Remplissage léger -->
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-nav)" opacity="0.14"/>
+                    <!-- Contour principal -->
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-nav)" stroke-width="2.2"/>
+                    <!-- Contour tirets intérieur -->
+                    <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-nav)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+                    <!-- M -->
+                    <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#4361ee" text-anchor="middle" dominant-baseline="central">M</text>
+                    <!-- D -->
+                    <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#7209b7" text-anchor="middle" dominant-baseline="central">D</text>
+                    <!-- Point accent -->
+                    <circle cx="27" cy="64" r="3" fill="#7209b7"/>
+                </svg>
+            </a>
         </div>
 
         <ul class="nav-menu">
@@ -67,8 +86,21 @@
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
         <div class="logo-wrapper">
-            <i class="fas fa-code logo-icon"></i>
-            <span class="logo-text">DUP-M</span>
+            <svg class="logo-svg" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="lg-mob" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4361ee"/>
+                        <stop offset="100%" stop-color="#7209b7"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-mob)" opacity="0.14"/>
+                <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-mob)" stroke-width="2.2"/>
+                <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-mob)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+                <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#4361ee" text-anchor="middle" dominant-baseline="central">M</text>
+                <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#7209b7" text-anchor="middle" dominant-baseline="central">D</text>
+                <circle cx="27" cy="64" r="3" fill="#7209b7"/>
+            </svg>
+            <span class="logo-text">Mathieu Dupressoir</span>
         </div>
         <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
             <i class="fas fa-times"></i>
@@ -390,7 +422,7 @@
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Email</h3>
-                        <p><a href="mailto:mathieu.dupressoir@example.com">mathieu.dupressoir@example.com</a></p>
+                        <p><a href="/cdn-cgi/l/email-protection#6904081d01000c1c470d1c191b0c1a1a06001b290c11080419050c470a0604"><span class="__cf_email__" data-cfemail="2944485d41404c5c074d5c595b4c5a5a46405b694c51484459454c074a4644">[email&#160;protected]</span></a></p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -451,8 +483,21 @@
     <div class="footer-content">
         <div class="footer-section">
             <div class="footer-logo">
-                <i class="fas fa-code"></i>
-                <span>DUP-M</span>
+                <svg class="logo-svg logo-svg--footer" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="lg-ftr" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#4361ee"/>
+                            <stop offset="100%" stop-color="#7209b7"/>
+                        </linearGradient>
+                    </defs>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-ftr)" opacity="0.14"/>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-ftr)" stroke-width="2.2"/>
+                    <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-ftr)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+                    <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#4361ee" text-anchor="middle" dominant-baseline="central">M</text>
+                    <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#7209b7" text-anchor="middle" dominant-baseline="central">D</text>
+                    <circle cx="27" cy="64" r="3" fill="#7209b7"/>
+                </svg>
+                <span>Mathieu Dupressoir</span>
             </div>
             <p class="footer-description">
                 Développeur full-stack passionné par la création de solutions
@@ -465,7 +510,7 @@
                 <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                <a href="/cdn-cgi/l/email-protection#87eae6f3efeee2f2a9e3f2f7f5e2f4f4e8eef5c7e2ffe6eaf7ebe2a9e4e8ea" class="social-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -487,7 +532,7 @@
             <ul class="footer-contact">
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <span><a href="mailto:mathieu.dupressoir@example.com">mathieu.dupressoir@example.com</a></span>
+                    <span><a href="/cdn-cgi/l/email-protection#86ebe7f2eeefe3f3a8e2f3f6f4e3f5f5e9eff4c6e3fee7ebf6eae3a8e5e9eb"><span class="__cf_email__" data-cfemail="90fdf1e4f8f9f5e5bef4e5e0e2f5e3e3fff9e2d0f5e8f1fde0fcf5bef3fffd">[email&#160;protected]</span></a></span>
                 </li>
                 <li>
                     <i class="fas fa-map-marker-alt"></i>
@@ -495,17 +540,4 @@
                 </li>
                 <li>
                     <i class="fab fa-github"></i>
-                    <span><a href="https://github.com/MatDup6080" target="_blank" rel="noopener">github.com/MatDup6080</a></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio BTS SIO SLAM</p>
-    </div>
-</footer>
-
-<script src="portfolio.js"></script>
-</body>
-</html>
+                    <span><a href="h
