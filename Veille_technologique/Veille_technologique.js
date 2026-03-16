@@ -1,150 +1,108 @@
-// Gestion du thème
+// ===== THÈME =====
 const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    const icon = themeToggle.querySelector('i');
-    if (body.classList.contains('dark-theme')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        localStorage.setItem('theme', 'light');
-    }
-});
+// Appliquer le thème sauvegardé immédiatement (évite le flash)
+(function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') document.body.classList.add('dark-theme');
+})();
 
-// Charger le thème depuis le localStorage
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-theme');
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
         const icon = themeToggle.querySelector('i');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
-});
+        const isLight = document.body.classList.contains('dark-theme');
+        icon.classList.toggle('fa-moon', !isLight);
+        icon.classList.toggle('fa-sun', isLight);
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
 
-// Gestion du menu mobile
+    // Synchroniser l'icône au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+        if (document.body.classList.contains('dark-theme')) {
+            const icon = themeToggle.querySelector('i');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    });
+}
+
+
+// ===== MENU MOBILE =====
 const menuToggle = document.getElementById('menuToggle');
-const menuClose = document.getElementById('menuClose');
+const menuClose  = document.getElementById('menuClose');
 const mobileMenu = document.getElementById('mobileMenu');
 
-menuToggle.addEventListener('click', () => {
+function openMobileMenu() {
     mobileMenu.classList.add('active');
     document.body.style.overflow = 'hidden';
-});
+}
 
-menuClose.addEventListener('click', () => {
+function closeMobileMenu() {
     mobileMenu.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+}
+
+if (menuToggle) menuToggle.addEventListener('click', openMobileMenu);
+if (menuClose)  menuClose.addEventListener('click', closeMobileMenu);
+
+// Fermer en cliquant sur un lien du menu mobile
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
 });
 
-// Fermer le menu en cliquant sur un lien
-const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
+// Fermer en cliquant en dehors du menu
+document.addEventListener('click', (e) => {
+    if (mobileMenu && mobileMenu.classList.contains('active') &&
+        !mobileMenu.contains(e.target) &&
+        e.target !== menuToggle) {
+        closeMobileMenu();
+    }
 });
 
-// Effet de défilement fluide pour les ancres
+
+// ===== DÉFILEMENT FLUIDE =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+    anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+            e.preventDefault();
+            window.scrollTo({ top: targetEl.offsetTop - 80, behavior: 'smooth' });
         }
     });
 });
 
-// Animation de texte dynamique
-const typingText = document.getElementById('typingText');
-const texts = [
-    'Développeur Full-Stack',
-    'Passionné par le code et l intelligence artificielle',
-    'Créateur de solutions web en php, javascript et css'
 
-];
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// ===== HIGHLIGHT DU MENU AU DÉFILEMENT =====
+const sections    = document.querySelectorAll('section[id]');
+const navLinks    = document.querySelectorAll('.nav-link');
+const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-function typeEffect() {
-    const currentText = texts[textIndex];
-
-    if (isDeleting) {
-        typingText.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingText.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    let typeSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && charIndex === currentText.length) {
-        typeSpeed = 2000;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        typeSpeed = 500;
-    }
-
-    setTimeout(typeEffect, typeSpeed);
-}
-
-// Démarrer l'effet de frappe
-setTimeout(typeEffect, 1000);
-
-// Highlight du menu en fonction du défilement
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
+function updateActiveLinks() {
     let current = '';
-
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 150)) {
+        if (window.scrollY >= section.offsetTop - 160) {
             current = section.getAttribute('id');
         }
     });
 
-    navLinks.forEach(link => {
+    [...navLinks, ...mobileLinks].forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === current) {
+        const href = link.getAttribute('href');
+        // On compare l'ancre (sans le #) à la section courante
+        if (href && href.startsWith('#') && href.substring(1) === current) {
             link.classList.add('active');
         }
     });
+}
 
-    // Mettre à jour aussi les liens du menu mobile
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    mobileNavLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
+window.addEventListener('scroll', updateActiveLinks, { passive: true });
 
-// Animation au défilement
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+
+// ===== ANIMATIONS AU DÉFILEMENT =====
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -155,33 +113,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observer les éléments à animer
-const elementsToAnimate = document.querySelectorAll('.access-card, .tech-item, .contact-item');
-elementsToAnimate.forEach(el => {
+document.querySelectorAll('.access-card, .tech-item, .contact-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
 });
 
-// Gestion des cartes de projets
-const accessCards = document.querySelectorAll('.access-card');
-accessCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        const arrow = card.querySelector('.card-arrow');
-        arrow.style.transform = 'translateX(10px)';
-    });
 
-    card.addEventListener('mouseleave', () => {
-        const arrow = card.querySelector('.card-arrow');
-        arrow.style.transform = 'translateX(0)';
-    });
-});
+// ===== ANNÉE DYNAMIQUE DANS LE FOOTER =====
+const yearEl = document.getElementById('currentYear');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Précharger les ressources importantes
+
+// ===== CHARGEMENT =====
 window.addEventListener('load', () => {
-    console.log('Portfolio chargé avec succès !');
-
-    // Ajouter une classe pour indiquer que la page est prête
     document.body.classList.add('page-loaded');
 });
