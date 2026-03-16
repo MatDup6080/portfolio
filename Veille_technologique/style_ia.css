@@ -137,15 +137,56 @@ body {
     white-space: nowrap;
 }
 
+/* Wrapper du menu avec flèches */
+.nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.nav-arrow {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-main);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    transition: var(--transition);
+    opacity: 0.5;
+}
+
+.nav-arrow:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    opacity: 1;
+}
+
+.nav-arrow.visible {
+    opacity: 1;
+}
+
 /* Menu principal — scrollable mais scrollbar invisible */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 0.25rem;
-    padding: 0 0.5rem;
+    padding: 0 0.25rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-behavior: smooth;
+    flex: 1;
+    min-width: 0;
 }
 
 .nav-menu::-webkit-scrollbar {
@@ -1028,18 +1069,19 @@ body {
         text-align: center;
         gap: 3rem;
     }
-
     .hero-title { font-size: 2.6rem; }
     .hero-stats { justify-content: center; }
     .hero-actions { justify-content: center; }
-
     .title-line.accent::after {
         left: 50%;
         transform: translateX(-50%);
     }
 
+    .nav-menu-wrapper { display: none; }
     .nav-menu { display: none; }
     .menu-toggle { display: block; }
+    .nav-actions .btn-small span { display: none; }
+    .nav-actions .btn-small i { margin: 0; }
 }
 
 @media (max-width: 768px) {
@@ -1049,9 +1091,6 @@ body {
     .hero-description { margin: 0 auto 3rem; }
     .section-title { font-size: 2rem; }
     .hero-stats { flex-direction: column; gap: 1.5rem; }
-
-    .nav-actions .btn-small span { display: none; }
-    .nav-actions .btn-small i { margin: 0; }
 
     .parcours-section { padding: 3rem 1rem; }
     .parcours-grid {
@@ -1064,7 +1103,6 @@ body {
     .contact-section { padding: 3rem 1rem; }
     .quick-access { padding: 3rem 1rem; }
     .tech-stack { padding: 3rem 1rem; }
-
     .tech-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
