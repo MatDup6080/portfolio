@@ -137,7 +137,7 @@ body {
     white-space: nowrap;
 }
 
-/* Menu principal — scrollable sur grands écrans car beaucoup d'items */
+/* Menu principal — scrollable mais scrollbar invisible */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -145,17 +145,11 @@ body {
     padding: 0 0.5rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: none;
 }
 
 .nav-menu::-webkit-scrollbar {
-    height: 2px;
-}
-
-.nav-menu::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 2px;
+    display: none;
 }
 
 .nav-link {
