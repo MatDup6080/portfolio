@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Professionnel - Mathieu Dupressoir</title>
+    <title>Veille Technologique — Intelligence Artificielle | Mathieu Dupressoir</title>
     <link rel="stylesheet" href="style_ia.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Navigation Professionnelle -->
+
+<!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
-        <!-- Logo et marque -->
         <div class="nav-brand">
-            <div class="logo-wrapper">
-                <i class="fas fa-code logo-icon"></i>
-                <span class="logo-text">MD  </span>
-            </div>
+            <a href="../index.html" class="logo-wrapper" aria-label="Retour au portfolio">
+                <svg class="logo-svg" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="lg-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#10b981"/>
+                            <stop offset="100%" stop-color="#3b82f6"/>
+                        </linearGradient>
+                    </defs>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-nav)" opacity="0.14"/>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-nav)" stroke-width="2.2"/>
+                    <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-nav)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+                    <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#10b981" text-anchor="middle" dominant-baseline="central">M</text>
+                    <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">D</text>
+                    <circle cx="27" cy="64" r="3" fill="#3b82f6"/>
+                </svg>
+            </a>
         </div>
 
-
-        <!-- Menu principal -->
         <ul class="nav-menu">
             <li><a href="../index.html" class="nav-link">
                 <i class="fas fa-user-circle"></i>
@@ -39,11 +49,11 @@
                 <i class="fas fa-cogs"></i>
                 <span>Fonctionnement</span>
             </a></li>
-            <li><a href="#Disciplines" class="nav-link">
+            <li><a href="#disciplines" class="nav-link">
                 <i class="fas fa-graduation-cap"></i>
                 <span>Disciplines</span>
             </a></li>
-            <li><a href="#modèles" class="nav-link">
+            <li><a href="#modeles" class="nav-link">
                 <i class="fas fa-project-diagram"></i>
                 <span>Modèles</span>
             </a></li>
@@ -53,46 +63,52 @@
             </a></li>
             <li><a href="#impacts" class="nav-link">
                 <i class="fas fa-chart-line"></i>
-                <span>Impacts Société</span>
+                <span>Impacts</span>
             </a></li>
             <li><a href="#avis" class="nav-link">
                 <i class="fas fa-comments"></i>
                 <span>Avis</span>
             </a></li>
-
         </ul>
 
-        <!-- Actions supplémentaires -->
         <div class="nav-actions">
             <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
                 <i class="fas fa-moon"></i>
             </button>
-            <a href="https://gemini.google.com/app" class="btn btn-primary btn-small">
-                <i class="fas fa-paper-plane"></i>
-                <span>Discuter avec IA</span>
+            <a href="https://gemini.google.com/app" target="_blank" rel="noopener" class="btn btn-primary btn-small">
+                <i class="fas fa-robot"></i>
+                <span>Discuter avec une IA</span>
             </a>
         </div>
 
-        <!-- Menu mobile -->
         <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </nav>
 
-<!-- Menu mobile (pour écrans petits) -->
+<!-- Menu mobile -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
-        <div class="logo-wrapper">
-            <i class="fas fa-code logo-icon"></i>
-            <span class="logo-text">DUP-M</span>
-        </div>
+        <svg class="logo-svg" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <linearGradient id="lg-mob" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10b981"/>
+                    <stop offset="100%" stop-color="#3b82f6"/>
+                </linearGradient>
+            </defs>
+            <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-mob)" opacity="0.14"/>
+            <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-mob)" stroke-width="2.2"/>
+            <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-mob)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+            <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#10b981" text-anchor="middle" dominant-baseline="central">M</text>
+            <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">D</text>
+        </svg>
         <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
             <i class="fas fa-times"></i>
         </button>
     </div>
     <ul class="mobile-nav-menu">
-       <li><a href="../index.html" class="mobile-nav-link ">
+        <li><a href="../index.html" class="mobile-nav-link">
             <i class="fas fa-user-circle"></i>
             <span>Portfolio</span>
         </a></li>
@@ -108,11 +124,11 @@
             <i class="fas fa-cogs"></i>
             <span>Fonctionnement</span>
         </a></li>
-        <li><a href="#Disciplines" class="mobile-nav-link">
+        <li><a href="#disciplines" class="mobile-nav-link">
             <i class="fas fa-graduation-cap"></i>
             <span>Disciplines</span>
         </a></li>
-        <li><a href="#modèles" class="mobile-nav-link">
+        <li><a href="#modeles" class="mobile-nav-link">
             <i class="fas fa-project-diagram"></i>
             <span>Modèles</span>
         </a></li>
@@ -120,46 +136,43 @@
             <i class="fas fa-rocket"></i>
             <span>Applications</span>
         </a></li>
-        <li><a href="#impacts" class="nav-link">
+        <li><a href="#impacts" class="mobile-nav-link">
             <i class="fas fa-chart-line"></i>
-            <span>Impacts Société</span>
+            <span>Impacts</span>
         </a></li>
-        <li><a href="#avis" class="nav-link">
+        <li><a href="#avis" class="mobile-nav-link">
             <i class="fas fa-comments"></i>
             <span>Avis</span>
         </a></li>
     </ul>
     <div class="mobile-menu-footer">
-        <a href="#impacts" class="btn btn-primary btn-block">
-            <i class="fas fa-paper-plane"></i>
-            <span>Discuter avec IA</span>
+        <a href="https://gemini.google.com/app" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+            <i class="fas fa-robot"></i>
+            <span>Discuter avec une IA</span>
         </a>
     </div>
-
-
 </div>
 
 <!-- Contenu principal -->
 <main class="main-content">
+
     <!-- Section Héros -->
     <section class="hero-section" id="introduction">
         <div class="hero-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="welcome-badge">
-                    <span class="badge-text">INTELLIGENCE ARTIFICIELLE</span>
+                    <span class="badge-text">VEILLE TECHNOLOGIQUE — BTS SIO</span>
                 </div>
 
                 <h1 class="hero-title">
-                    <span class="title-line">Les différents aspects de </span>
-                    <span class="title-line accent">Intélligence Artificielle</span>
+                    <span class="title-line">Les différents aspects de</span>
+                    <span class="title-line accent">l'Intelligence Artificielle</span>
                 </h1>
 
-
                 <p class="hero-description">
-                    Page consacré à l'intélligence artificielle et ses différentes
-                    facettes, explorant ses applications et son impact
-                    sur notre société.
+                    Page consacrée à l'intelligence artificielle et ses différentes
+                    facettes, explorant ses applications et son impact sur notre société.
                 </p>
 
                 <div class="hero-stats">
@@ -168,49 +181,50 @@
                         <div class="stat-label">Utilisateurs en France</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">30%</div>
-                        <div class="stat-label">Population Française utilisant l'IA</div>
+                        <div class="stat-number">30 %</div>
+                        <div class="stat-label">De la population française utilise l'IA</div>
                     </div>
-
                 </div>
 
                 <div class="hero-actions">
                     <a href="#histoire" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Histoire</span>
+                        <i class="fas fa-history"></i>
+                        <span>Découvrir l'histoire</span>
                     </a>
-
+                    <a href="../index.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Retour au portfolio</span>
+                    </a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
-    <!-- Section Parcours -->
+    <!-- Section Histoire -->
     <section class="parcours-section" id="histoire">
         <div class="section-header">
             <h2 class="section-title">Histoire</h2>
-            <p class="section-subtitle">Les différentes étapes de l'histoire de l'intelligence Artificielle</p>
+            <p class="section-subtitle">Les grandes étapes de l'histoire de l'intelligence artificielle</p>
         </div>
 
         <div class="parcours-grid">
-            <!-- Carte 1 : Alan Turing -->
+
+            <!-- 1950 — Alan Turing -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">1950</div>
-                    <h3 class="parcours-title">Alan Turing pose LA question qui fait entrer l'intelligence artificielle dans l'histoire</h3>
+                    <h3 class="parcours-title">Alan Turing pose la question fondatrice de l'IA</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Alan Turing : Créateur du test de Turing.<br>
-                        <br>
-                        - Test Turing : Jeu d'imitation où une machine doit tenter de se faire passer pour un humain dans une conversation.<br>
-                        <br>
-                        - Aujourd'hui : Le Test sert a évaluer les performances des IA génératives.
+                        Alan Turing publie « Computing Machinery and Intelligence » et propose le test de Turing : une machine doit tenter de se faire passer pour un humain dans une conversation écrite. Ce jeu d'imitation devient la première définition opérationnelle de l'intelligence artificielle. Aujourd'hui, le test sert encore de référence pour évaluer les performances des IA génératives.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">Test de Turing</span>
+                        <span class="skill-tag">Fondations théoriques</span>
+                    </div>
                     <div class="parcours-image-link">
-                        <a href="https://fr.wikipedia.org/wiki/Alan_Turing" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.wikipedia.org/wiki/Alan_Turing" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/turing.jpg" alt="Alan Turing" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -221,24 +235,22 @@
                 </div>
             </div>
 
-            <!-- Carte 2 : Naissance du terme IA -->
+            <!-- 1956 — Dartmouth -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">1956</div>
-                    <h3 class="parcours-title">La naissance du terme « intelligence artificielle »</h3>
+                    <h3 class="parcours-title">Naissance du terme « intelligence artificielle »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Eté 1956 ( Dartmouth College, dans le New Hampshire): conférence fondatrice : la « Dartmouth Summer Research Project on Artificial Intelligence ». <br>
-                        <br>
-                        - John McCarthy (jeune chercheur visionnaire), propose le terme « intelligence artificielle » ou « Artificial Intelligence » (conférence en anglais).<br>
-                        <br>
-                        - Conférence : point de départ officiel de la recherche en IA.<br>
-                        <br>
-                        - Idée centrale des débats : créer des ordinateurs qui pourraient un jour simuler des fonctions humaines comme l’apprentissage, la mémoire ou la résolution de problèmes.
+                        Durant l'été 1956 au Dartmouth College (New Hampshire), John McCarthy organise la conférence fondatrice de l'IA et propose le terme « Artificial Intelligence ». L'idée centrale : créer des ordinateurs capables de simuler des fonctions humaines comme l'apprentissage, la mémoire ou la résolution de problèmes. Ce moment marque le point de départ officiel de la recherche en IA.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">John McCarthy</span>
+                        <span class="skill-tag">Dartmouth College</span>
+                    </div>
                     <div class="parcours-image-link">
-                        <a href="https://fr.wikipedia.org/wiki/Conf%C3%A9rence_de_Dartmouth" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.wikipedia.org/wiki/Conf%C3%A9rence_de_Dartmouth" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/dartmouth.jpg" alt="Conférence de Dartmouth" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -249,24 +261,22 @@
                 </div>
             </div>
 
-            <!-- Carte 3 : ELIZA -->
+            <!-- 1966 — ELIZA -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">1966</div>
-                    <h3 class="parcours-title">Naissance d’ELIZA, le premier chatbot de l’histoire (10 ans après)</h3>
+                    <h3 class="parcours-title">ELIZA — le premier chatbot de l'histoire</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - 1966 : Joseph Weizenbaum (chercheur au MIT) : développe ELIZA : programme capable de simuler une conversation avec un psychothérapeute rogerien.<br>
-                        <br>
-                        - ELIZA (fonctionnement) : plutôt que de les formuler à voix haute, l’utilisateur tapait ses problèmes à l’écrit avant de les envoyer à la machine.
-                        ELIZA reformulait alors son entrée, ou piochait dans une banque de réponses préprogrammées pour relancer la discussion. Le but de Weizenbaum avec son invention ? Montrer les limites de la machine. Problème ? Il a surtout mis en lumière celles des humains, puisque nombreux sont ceux qui se sont attachés à leur psy artificiel, pensant même qu’ils conversaient avec un véritable être humain, ou tout du moins, avec une machine réellement intelligente.<br>
-                        <br>
-                        - Aujourd’hui : le programme est considéré comme le premier chatbot de l’histoire, et qu’il a permis de prouver qu’un ordinateur pouvait interagir en langage naturel. Cela a d’ailleurs donné naissance à toute une branche de la recherche en IA : le traitement automatique du langage naturel (TALN).
-
-                        </p>
+                        Joseph Weizenbaum (MIT) développe ELIZA, un programme simulant un psychothérapeute rogérien. ELIZA reformulait les entrées de l'utilisateur ou piochait dans des réponses préprogrammées. Malgré l'intention de Weizenbaum de montrer les limites des machines, de nombreux utilisateurs se sont attachés à leur « psy artificiel ». Ce programme est considéré comme le premier chatbot et a donné naissance au TALN (traitement automatique du langage naturel).
+                    </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">TALN</span>
+                        <span class="skill-tag">Premier chatbot</span>
+                    </div>
                     <div class="parcours-image-link">
-                        <a href="https://fr.wikipedia.org/wiki/ELIZA" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.wikipedia.org/wiki/ELIZA" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/eliza.jpg" alt="ELIZA chatbot" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -277,33 +287,23 @@
                 </div>
             </div>
 
-            <!-- Carte 4 : Hivers de l'IA -->
+            <!-- 1997 — Deep Blue -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">1997</div>
-                    <h3 class="parcours-title">Deep Blue bat Kasparov : l’IA entre définitivement dans l’histoire lorsque le champion du monde est mis échec et mat par un superordinateur
-                    </h3>
+                    <h3 class="parcours-title">Deep Blue bat Kasparov aux échecs</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Pendant 10 ans : Passage à vide pour l’IA, avec des progrès limités et des attentes déçues (« hivers de l’IA »).<br>
-                        <br>
-                        - Dans les années 1990 : IBM travaille sur un supercalculateur spécialisé dans le jeu d'échec. <br>
-                        <br>
-                        - Objectif : La machine bat Kasparov (l’un des plus grands champions du monde d’échecs de tous les temps).<br>
-                        <br>
-                        - 1996: Première confrontation entre Deep Blue et Kasparov. Le champion l’emporte 4-2.<br>
-                        <br>
-                        - 1997 : revanche entre Deep Blue et Kasparov : la machine bat pour la première fois un champion du monde d’échecs en titre sur le score de : 3,5 à 2,5.<br>
-                        <br>
-                        - Comment Deep Blue a-t-il fait ? : Si le superordinateur n’a pas d’intuition, il a un véritable superpouvoir : une puissance de calcul phénoménale, qui lui permet d’analyser 200 millions de coups par seconde pour identifier la meilleure option.<br>
-                        <br>
-                        - Conclusion : l'humanité réalise alors que l’IA peut surpasser l’humain dans certaines tâches complexes. Ce match marque ainsi l’histoire de l’intelligence artificielle, et a inspiré de nombreux livres et films sur l’IA.
-
+                        Le superordinateur Deep Blue d'IBM bat le champion du monde d'échecs Garry Kasparov lors d'un match en six parties. C'est la première fois qu'une machine bat un champion du monde en titre dans des conditions de compétition officielle. Cet événement marque un tournant symbolique et prouve que les machines peuvent surpasser l'humain dans des tâches cognitives complexes.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">IBM Deep Blue</span>
+                        <span class="skill-tag">Heuristique</span>
+                    </div>
                     <div class="parcours-image-link">
-                         <a href="https://fr.wikipedia.org/wiki/Deep_Blue_(ordinateur)" target="_blank" class="image-link-wrapper">
-                            <img src="/img/deep-blue.jpg" alt="Deep Blue vs Kasparov" class="parcours-img">
+                        <a href="https://fr.wikipedia.org/wiki/Deep_Blue" target="_blank" rel="noopener" class="image-link-wrapper">
+                            <img src="/img/deepblue.jpg" alt="Deep Blue vs Kasparov" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Deep Blue vs Kasparov</span>
@@ -313,109 +313,49 @@
                 </div>
             </div>
 
-            <!-- Carte 5 : Systèmes experts -->
-            <div class="parcours-card">
-                <div class="parcours-header">
-                    <div class="parcours-year">2006 </div>
-                    <h3 class="parcours-title"> L’IA renaît de ses cendres grâce à l’envolée du Big Data et au retour en force du Deep Learning</h3>
-                </div>
-                <div class="parcours-body">
-                    <p class="parcours-description">
-                        - 2006 : L’IA connaît une renaissance grâce à l’explosion des données numériques (Big Data) et aux avancées en apprentissage profond (Deep Learning).<br>
-                        <br>
-                        - Big Data : L’augmentation massive des données disponibles permet aux algorithmes d’apprentissage automatique de s’entraîner sur des ensembles de données plus vastes et diversifiés.<br>
-                        <br>
-                        - Deep Learning : Réseaux de neurones profonds capables d’apprendre des représentations hiérarchiques des données, améliorant considérablement les performances dans des domaines comme la vision par ordinateur et le traitement du langage naturel.<br>
-                        <br>
-                        - Conséquences : Cette période marque le début d’une nouvelle ère pour l’intelligence artificielle, avec des applications révolutionnaires dans divers secteurs, de la santé à la finance en passant par les transports.
-
-                    </p>
-                    <div class="parcours-image-link">
-                       <a href="https://fr.wikipedia.org/wiki/Apprentissage_profond" target="_blank" class="image-link-wrapper">
-                            <img src="/img/deep-learning.jpg" alt="Deep Learning" class="parcours-img">
-                            <div class="image-overlay">
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>Découvrir le Deep Learning</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte 6 : Deep Blue -->
-            <div class="parcours-card">
-                <div class="parcours-header">
-                    <div class="parcours-year">2012 </div>
-                    <h3 class="parcours-title">AlexNet fait un carton sur ImageNet grâce au Deep Learning</h3>
-                </div>
-                <div class="parcours-body">
-                    <p class="parcours-description">
-                         - Contexte : Concours annuel de reconnaissance d’images ImageNet (plus grand défi en vision par ordinateur).<br>
-                        <br>
-                        - 2012 : AlexNet (réseau de neurones convolutifs développé par Alex Krizhevsky, Ilya Sutskever et Geoffrey Hinton) remporte le concours ImageNet avec une marge significative, démontrant la puissance des réseaux de neurones convolutifs.<br>
-                        <br>
-                        - Impact : Cet événement déclenche la révolution de l'apprentissage profond et ouvre la voie aux avancées modernes en vision par ordinateur et traitement du langage.
-                    </p>
-                    <div class="parcours-image-link">
-                       <a href="https://fr.wikipedia.org/wiki/AlexNet" target="_blank" class="image-link-wrapper">
-                            <img src="/img/alexnet.jpg" alt="AlexNet" class="parcours-img">
-                            <div class="image-overlay">
-                                <i class="fas fa-external-link-alt"></i>
-                                <span>AlexNet révolution</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte 7 : Apprentissage profond -->
+            <!-- 2016 — AlphaGo -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">2016</div>
-                    <h3 class="parcours-title">AlphaGo bat Lee Sedol : l’IA domine dans un jeu que l’on pensait trop complexe pour elle</h3>
+                    <h3 class="parcours-title">AlphaGo bat Lee Sedol au jeu de Go</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - 2016 : AlphaGo (programme développé par DeepMind, filiale de Google) bat Lee Sedol, l’un des meilleurs joueurs mondiaux de Go.<br>
-                        <br>
-                        - Importance : Le Go est un jeu de stratégie extrêmement complexe, avec un nombre de configurations possibles bien plus élevé que celui des échecs. La victoire d’AlphaGo marque une étape majeure dans le développement de l’intelligence artificielle.<br>
-                        <br>
-                        - Techniques utilisées : Combinaison de réseaux de neurones profonds et d’algorithmes d’apprentissage par renforcement.<br>
-                        <br>
-                        - Conséquences : Cette victoire démontre que l’IA peut maîtriser des tâches complexes nécessitant intuition et créativité, ouvrant la voie à de nouvelles applications dans divers domaines.
+                        AlphaGo (DeepMind / Google) bat Lee Sedol, l'un des meilleurs joueurs mondiaux de Go. Le Go est bien plus complexe que les échecs — le nombre de configurations possibles dépasse le nombre d'atomes de l'univers. AlphaGo combine réseaux de neurones profonds et apprentissage par renforcement, démontrant que l'IA peut maîtriser des tâches nécessitant intuition et créativité.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">DeepMind</span>
+                        <span class="skill-tag">Apprentissage par renforcement</span>
+                    </div>
                     <div class="parcours-image-link">
-                         <a href="https://fr.wikipedia.org/wiki/AlphaGo" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.wikipedia.org/wiki/AlphaGo" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/alphago.jpg" alt="AlphaGo vs Lee Sedol" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>AlphaGo vs Lee Sedol</span>
                             </div>
                         </a>
-
                     </div>
                 </div>
             </div>
 
-            <!-- Carte 8 : ChatGPT et l'IA générative -->
+            <!-- 2018 — BERT -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">2018</div>
-                    <h3 class="parcours-title">BERT : Google marque une nouvelle étape dans l’histoire de l’IA avec son modèle basé sur les Transformers</h3>
+                    <h3 class="parcours-title">BERT — Google révolutionne le traitement du langage</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - 2018 : Google présente BERT (Bidirectional Encoder Representations from Transformers), un modèle de traitement du langage naturel basé sur l’architecture des Transformers.<br>
-                        <br>
-                        - Innovation : BERT est capable de comprendre le contexte des mots dans une phrase en analysant les deux directions (gauche et droite) simultanément, ce qui améliore considérablement la compréhension du langage.<br>
-                        <br>
-                        - Impact : BERT révolutionne les performances des modèles de langage, devenant la base de nombreux systèmes de recherche et d’assistants virtuels.<br>
-                        <br>
-                        - Conséquences : L’introduction de BERT marque une avancée majeure dans le traitement automatique du langage naturel, ouvrant la voie à des applications plus sophistiquées en IA.
-
+                        Google présente BERT (Bidirectional Encoder Representations from Transformers), capable d'analyser le contexte d'un mot dans les deux directions simultanément (gauche et droite). Cette approche améliore considérablement la compréhension du langage naturel et devient la base de nombreux systèmes de recherche et assistants virtuels. BERT ouvre la voie aux grands modèles de langage modernes.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">TALN</span>
+                        <span class="skill-tag">Google</span>
+                    </div>
                     <div class="parcours-image-link">
-                       <a href="https://fr.wikipedia.org/wiki/BERT_(mod%C3%A8le_de_langage)" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.wikipedia.org/wiki/BERT_(mod%C3%A8le_de_langage)" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/bert.jpg" alt="BERT modèle" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -426,25 +366,23 @@
                 </div>
             </div>
 
-            <!-- Carte 8 : ChatGPT et l'IA générative -->
+            <!-- 2020 — GPT-3 -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">2020</div>
-                    <h3 class="parcours-title">GPT-3 inaugure l’ère des grands modèles de langage (LLMs)</h3>
+                    <h3 class="parcours-title">GPT-3 inaugure l'ère des grands modèles de langage</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - 2020 : OpenAI lance GPT-3 (Generative Pre-trained Transformer 3), un modèle de langage avec 175 milliards de paramètres, devenant le plus grand modèle de langage à l’époque.<br>
-                        <br>
-                        - Capacités : GPT-3 peut générer du texte cohérent, traduire des langues, répondre à des questions, et même écrire du code, ouvrant la voie à une multitude d’applications.<br>
-                        <br>
-                        - Impact : GPT-3 popularise les grands modèles de langage (LLMs) et stimule la recherche dans le domaine de l’IA générative.<br>
-                        <br>
-                        - Conséquences : L’arrivée de GPT-3 marque un tournant dans l’histoire de l’intelligence artificielle, rendant les technologies basées sur le langage plus accessibles et puissantes.
-
+                        OpenAI lance GPT-3 avec 175 milliards de paramètres, devenant le plus grand modèle de langage de l'époque. GPT-3 peut générer du texte cohérent, traduire, répondre à des questions et écrire du code. Il popularise les LLM (Large Language Models) et stimule massivement la recherche en IA générative, rendant ces technologies plus accessibles et puissantes.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">175 Mrd paramètres</span>
+                    </div>
                     <div class="parcours-image-link">
-                        <a href="https://openai.com/chatgpt" target="_blank" class="image-link-wrapper">
+                        <a href="https://openai.com/chatgpt" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/chatgpt.jpg" alt="ChatGPT" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -454,24 +392,25 @@
                     </div>
                 </div>
             </div>
-            <!-- Carte 8 : ChatGPT et l'IA générative -->
+
+            <!-- 2024-2025 — Course LLM -->
             <div class="parcours-card">
                 <div class="parcours-header">
-                    <div class="parcours-year">2024-2025</div>
-                    <h3 class="parcours-title">La course aux LLMs est lancée : GPT-4o, Claude 3, Gemini… qui deviendra la meilleure IA générative de l’histoire ?</h3>
+                    <div class="parcours-year">2024 – 2025</div>
+                    <h3 class="parcours-title">La course aux LLM : GPT-4o, Claude, Gemini…</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - 2024-2025 : Multiplication des grands modèles de langage (LLMs) avec des acteurs majeurs comme OpenAI (GPT-4o), Anthropic (Claude 3), et Google (Gemini).<br>
-                        <br>
-                        - Innovations : Chaque modèle apporte des améliorations en termes de compréhension contextuelle, de génération de texte, et d’intégration multimodale.<br>
-                        <br>
-                        - Impact : La compétition entre ces géants stimule l’innovation rapide dans le domaine de l’IA générative, rendant ces technologies plus accessibles et performantes.<br>
-                        <br>
-                        - Conséquences : Cette période marque une étape cruciale dans l’histoire de l’intelligence artificielle, avec des implications majeures pour la société, l’économie, et la culture.
+                        Multiplication des grands modèles de langage avec les acteurs majeurs : OpenAI (GPT-4o), Anthropic (Claude 3 / 4), Google (Gemini), Mistral AI. Chaque modèle apporte des améliorations en compréhension contextuelle, génération multimodale et raisonnement. Cette compétition stimule une innovation rapide avec des implications majeures pour la société, l'économie et la culture.
                     </p>
+                    <div class="parcours-skills">
+                        <span class="skill-tag">GPT-4o</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">Gemini</span>
+                        <span class="skill-tag">Mistral</span>
+                    </div>
                     <div class="parcours-image-link">
-                        <a href="https://gemini.google.com/app" target="_blank" class="image-link-wrapper">
+                        <a href="https://gemini.google.com/app" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/gemini.jpg" alt="Gemini IA" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -481,401 +420,287 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
+
+    <!-- Section Fonctionnement -->
     <section class="contact-section" id="fonctionnement">
         <div class="section-header">
             <h2 class="section-title">Fonctionnement</h2>
-            <p class="section-subtitle">Les différentes étapes du fonctionnement de l'intelligence artificielle</p>
+            <p class="section-subtitle">Les grandes étapes du traitement de l'information par une IA</p>
         </div>
-
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-database"></i>
                     <div>
-                        <h3>Entrée : </h3>
-                        <p>Les données sont d'abord collectées à partir de diverses sources sous forme de texte, audio, vidéos et plus encore. Elles sont triées par catégories, comme celles qui peuvent être lues par les algorithmes et celles qui ne le peuvent pas. Vous créez ensuite le protocole et les critères selon lesquels les données seront traitées et utilisées pour des résultats spécifiques.</p>
+                        <h3>1. Entrée</h3>
+                        <p>Les données sont collectées depuis diverses sources (texte, audio, vidéo…), triées par catégories et préparées selon des protocoles définis. Cette étape détermine la qualité et la pertinence de ce que l'IA pourra apprendre.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-cogs"></i>
                     <div>
-                        <h3>Traitement :</h3>
-                        <p>Une fois les données rassemblées et saisies, l'étape suivante consiste à permettre à l'IA de décider quoi en faire.
-                            L'IA trie et déchiffre les données en utilisant des modèles qu'elle a été programmée à apprendre jusqu'à ce qu'elle reconnaisse des modèles similaires dans les données qui sont filtrées dans le système.</p>
+                        <h3>2. Traitement</h3>
+                        <p>L'IA trie et déchiffre les données en utilisant des modèles qu'elle a été entraînée à reconnaître. Elle identifie des patterns similaires dans les nouvelles données qui transitent dans le système, construisant progressivement sa compréhension.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-chart-line"></i>
                     <div>
-                        <h3>Résultats :</h3>
-                        <p>Après l'étape de traitement, l'IA peut utiliser ces modèles complexes pour prédire les résultats concernant le comportement des clients et les tendances du marché.
-                            À cette étape, l'IA est programmée pour décider si des données spécifiques sont « validées » ou « rejetées » — en d'autres termes, correspondent-elles aux modèles précédents ? Cela détermine les résultats qui peuvent être utilisés pour prendre des décisions.</p>
+                        <h3>3. Résultats</h3>
+                        <p>L'IA utilise les patterns détectés pour prédire des comportements et des tendances. Elle décide si les données sont « validées » (conformes aux modèles connus) ou « rejetées », déterminant ainsi les sorties utilisables pour la prise de décision.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-sliders-h"></i>
                     <div>
-                        <h3>Ajustements :</h3>
-                        <p>Lorsque des ensembles de données sont considérés comme « rejetés », l'IA apprend de cette erreur, et le processus est répété à nouveau dans des conditions différentes. Il se peut que les règles de l'algorithme doivent être ajustées pour s'adapter à l'ensemble de données en question ou que l'algorithme nécessite une légère modification.
-                            À cette étape, vous pourriez revenir à l'étape des résultats pour mieux vous aligner sur les conditions de l'ensemble de données actuel.</p>
+                        <h3>4. Ajustements</h3>
+                        <p>Lorsque des données sont « rejetées », l'IA apprend de ses erreurs et le processus recommence dans des conditions différentes. Les règles de l'algorithme sont affinées pour mieux s'adapter aux données, créant une boucle d'amélioration continue.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clipboard-check"></i>
                     <div>
-                        <h3>Évaluations :</h3>
-                        <p>La dernière étape pour l'IA qui accomplit une tâche assignée est l'évaluation. Ici, la technologie d'IA synthétise les informations obtenues à partir de l'ensemble de données pour faire des prédictions basées sur les résultats et les ajustements. Les retours générés par les ajustements peuvent être incorporés dans l'algorithme avant d'aller plus loin.</p>
+                        <h3>5. Évaluation</h3>
+                        <p>Étape finale : l'IA synthétise les informations pour formuler des prédictions basées sur les résultats et les ajustements accumulés. Ces retours peuvent être intégrés dans l'algorithme pour améliorer les prochaines itérations.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <section class="contact-section" id="Disciplines">
+
+    <!-- Section Disciplines -->
+    <!-- Note : l'ancre est maintenant #disciplines (minuscules) pour cohérence -->
+    <section class="contact-section" id="disciplines">
         <div class="section-header">
             <h2 class="section-title">Disciplines</h2>
-            <p class="section-subtitle">Les différentes disciplines de l'intelligence artificielle</p>
+            <p class="section-subtitle">Les grandes branches de l'intelligence artificielle</p>
         </div>
-
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-robot"></i>
                     <div>
-                        <h3>Apprentissage automatique :</h3>
-                        <p>Machine learning est un sous-ensemble de l'IA qui intègre l'informatique, les mathématiques et la programmation. L'apprentissage automatique se concentre sur le développement d'algorithmes qui aident les machines à apprendre à partir des données et à prédire des tendances sans assistance humaine.</p>
+                        <h3>Apprentissage automatique (Machine Learning)</h3>
+                        <p>Sous-ensemble de l'IA qui se concentre sur le développement d'algorithmes permettant aux machines d'apprendre à partir des données et de prédire des tendances sans assistance humaine directe. Il combine informatique, mathématiques et programmation.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-brain"></i>
                     <div>
-                        <h3>Apprentissage profond :</h3>
-                        <p>Deep learning est une discipline de l'IA qui imite le cerveau humain en apprenant de sa façon de structurer et de traiter l'information pour prendre des décisions. Ce sous-ensemble de l'apprentissage automatique peut apprendre à partir de données non structurées sans supervision, plutôt que d'être programmé pour effectuer une tâche spécifique.</p>
+                        <h3>Apprentissage profond (Deep Learning)</h3>
+                        <p>Discipline qui imite le fonctionnement du cerveau humain en structurant et traitant l'information en couches successives. Ce sous-ensemble du Machine Learning peut apprendre de données non structurées sans supervision explicite.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-project-diagram"></i>
                     <div>
-                        <h3>Réseaux neuronaux :</h3>
-                        <p> Un réseau neuronal est une technique d'apprentissage profond conçue pour ressembler à la structure du cerveau humain. Les réseaux neuronaux effectuent des calculs et créent des résultats sur de grands ensembles de données.</p>
+                        <h3>Réseaux de neurones artificiels</h3>
+                        <p>Technique d'apprentissage profond conçue pour reproduire la structure du cerveau humain. Les réseaux de neurones effectuent des calculs sur de grands ensembles de données pour créer des résultats et identifier des patterns complexes.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-language"></i>
                     <div>
-                        <h3>Traitement du langage naturel :</h3>
-                        <p>Natural language processing (NLP) est une IA qui permet aux ordinateurs de comprendre le langage humain parlé et écrit. Le NLP permet la reconnaissance vocale et textuelle sur les appareils.</p>
+                        <h3>Traitement du langage naturel (NLP)</h3>
+                        <p>Branche de l'IA permettant aux ordinateurs de comprendre le langage humain écrit et parlé. Le NLP est à la base de la reconnaissance vocale, des chatbots, de la traduction automatique et des moteurs de recherche modernes.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-eye"></i>
                     <div>
-                        <h3>Vision par ordinateur :</h3>
-                        <p>La vision par ordinateur est un domaine interdisciplinaire qui se concentre sur la façon dont les ordinateurs peuvent comprendre les images et les vidéos. Dans l'IA, la vision par ordinateur permet d'automatiser les activités que le système visuel humain effectue habituellement.</p>
+                        <h3>Vision par ordinateur (Computer Vision)</h3>
+                        <p>Domaine interdisciplinaire permettant aux ordinateurs d'interpréter des images et des vidéos. En IA, la vision par ordinateur automatise des tâches visuelles : reconnaissance faciale, détection d'objets, analyse médicale d'imagerie.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Section Accès Rapide -->
-    <section class="quick-access" id="modèles">
+    <!-- Section Modèles -->
+    <section class="quick-access" id="modeles">
         <div class="section-header">
             <h2 class="section-title">Modèles</h2>
-            <p class="section-subtitle">Découvrez Les différents modèles d'intelligence artificielle</p>
+            <p class="section-subtitle">Les grands types de modèles d'intelligence artificielle actuels</p>
         </div>
 
         <div class="access-grid">
-            <a href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" class="access-card">
-                <h3 class="card-title">LLM : Large Language Models</h3>
-
+            <a href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" target="_blank" rel="noopener" class="access-card">
+                <div class="card-icon"><i class="fas fa-comments"></i></div>
+                <h3 class="card-title">LLM — Large Language Models</h3>
                 <p class="card-description">
-                    <i>Le socle de l'IA textuelle, devenu l'outil de référence pour la réflexion et la rédaction. </i> <br>
-                    <br>
-                    Capacités : Rédaction complexe, synthèse de documents, génération de code informatique, raisonnement logique et traduction haute fidélité.<br>
-                    <br>
-                    Chiffres clés : Le marché des LLM devrait atteindre 12,8 milliards $ en 2025 (croissance annuelle de 35%).<br>
-                    <br>
-                    Impact : Gain de productivité de 30 % à 40 % pour les métiers de l'écriture et de la programmation.<br>
-                    <br>
-                    Exemples : GPT-5 (OpenAI), Claude 3.5/4 (Anthropic), Mistral Large 3 (Mistral AI).
+                    <em>Le socle de l'IA textuelle, outil de référence pour la réflexion et la rédaction.</em><br><br>
+                    Capacités : rédaction complexe, synthèse, génération de code, raisonnement logique, traduction haute fidélité.<br><br>
+                    Le marché des LLM devrait atteindre 12,8 Mrd $ en 2025 (croissance annuelle de 35 %). Gain de productivité de 30 à 40 % pour les métiers de l'écriture et de la programmation.<br><br>
+                    Exemples : GPT-4o (OpenAI), Claude 4 (Anthropic), Mistral Large (Mistral AI).
                 </p>
-                <div class="card-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
+                <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
             </a>
 
-            <a href="https://research.aimultiple.com/large-multimodal-models/" class="access-card">
-                <h3 class="card-title">LMM : Large Multimodal Models</h3>
-
+            <a href="https://research.aimultiple.com/large-multimodal-models/" target="_blank" rel="noopener" class="access-card">
+                <div class="card-icon"><i class="fas fa-photo-video"></i></div>
+                <h3 class="card-title">LMM — Large Multimodal Models</h3>
                 <p class="card-description">
-                    <i>L'IA "tous sens" qui ne se limite plus au texte mais voit, entend et parle nativement. </i> <br>
-                    <br>
-                    Capacités : Analyser une vidéo en temps réel pour en faire un résumé, comprendre des schémas techniques à partir d'une photo, discuter vocalement avec émotion.<br>
-                    <br>
-                    Chiffres clés : 85 % des nouveaux modèles sortis en 2025 sont multimodaux par défaut.<br>
-                    <br>
-                    Impact : Révolution du support technique (analyse visuelle des pannes) et de l'accessibilité (description du monde pour les malvoyants).<br>
-                    <br>
+                    <em>L'IA « tous sens » qui ne se limite plus au texte : elle voit, entend et parle nativement.</em><br><br>
+                    Capacités : analyse de vidéo en temps réel, compréhension de schémas techniques, conversation vocale avec émotion.<br><br>
+                    85 % des nouveaux modèles sortis en 2025 sont multimodaux par défaut. Révolution du support technique et de l'accessibilité.<br><br>
                     Exemples : GPT-4o, Gemini 1.5 Pro, Llama 4-M.
                 </p>
-                <div class="card-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
+                <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
             </a>
-            <a href="https://www.datacamp.com/fr/blog/large-action-models" class="access-card">
-                <h3 class="card-title">LAM : Large Action Models</h3>
 
+            <a href="https://www.datacamp.com/fr/blog/large-action-models" target="_blank" rel="noopener" class="access-card">
+                <div class="card-icon"><i class="fas fa-hand-pointer"></i></div>
+                <h3 class="card-title">LAM — Large Action Models</h3>
                 <p class="card-description">
-                    <i>Le passage de la discussion à l'action. C'est le cerveau des "Agents IA". </i> <br>
-                    <br>
-                    Capacités : Naviguer de manière autonome sur des logiciels (Excel, SAP, CRM), remplir des formulaires, réserver des voyages et coordonner plusieurs outils pour finaliser une tâche.<br>
-                    <br>
-                    Chiffres clés : 41 % des entreprises prévoient d'investir dans des agents IA autonomes en 2025.<br>
-                    <br>
-                    Impact : Automatisation des "tâches administratives invisibles", réduisant de 60 % le temps passé sur les processus métiers répétitifs.<br>
-                    <br>
-                    Exemples : Operator (OpenAI), Claude Computer Use, Rabbit OS.
+                    <em>L'IA qui agit : elle ne se contente plus de répondre, elle exécute des tâches dans le monde réel.</em><br><br>
+                    Capacités : navigation web autonome, remplissage de formulaires, gestion de calendrier, orchestration de workflows.<br><br>
+                    Les agents IA pourraient automatiser 25 % des tâches répétitives d'ici 2026 selon le Gartner.<br><br>
+                    Exemples : Operator (OpenAI), Claude Computer Use (Anthropic), Gemini Astra (Google).
                 </p>
-                <div class="card-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
+                <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
             </a>
-            <a href="https://www.ibm.com/fr-fr/think/topics/small-language-models" class="access-card">
-
-                <h3 class="card-title">SLM : Small Language Models</h3>
-
-                <p class="card-description">
-                    <i>La tendance "Small is the new Big" : des modèles légers, rapides et locaux. </i> <br>
-                    <br>
-                    Capacités : Tourner sans connexion internet sur un smartphone ou un PC, traiter des données sensibles en interne sans passer par le Cloud.<br>
-                    <br>
-                    Chiffres clés : Consomment jusqu'à 100 fois moins d'énergie qu'un LLM géant pour des tâches simples.<br>
-                    <br>
-                    Impact : Démocratisation de l'IA dans les smartphones et garantie de la souveraineté des données pour les entreprises.<br>
-                    <br>
-                    Exemples : Phi-4 (Microsoft), Gemma 3 (Google), Mistral NeMo.
-                </p>
-                <div class="card-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </a>
-            <a href="https://www.ibm.com/fr-fr/think/topics/vision-language-models" class="access-card">
-                <h3 class="card-title">LVM : Large Vision Models</h3>
-
-                <p class="card-description">
-                    <i>L'œil expert, spécialisé dans l'analyse de l'image fixe ou animée. </i> <br>
-                    <br>
-                    Capacités : Diagnostic médical ultra-précis (radiologies), contrôle qualité industriel à grande vitesse, et surveillance environnementale (détection de feux de forêt par satellite).<br>
-                    <br>
-                    Chiffres clés : Marché estimé à 45 milliards $ en 2025.<br>
-                    <br>
-                    Impact : Réduction des erreurs de diagnostic médical de 15 % à 20 % et optimisation des chaînes de production.<br>
-                    <br>
-                    Exemples : DINOv2 (Meta), Segment Anything (SAM), AlphaFold 3 (pour la structure des protéines).
-                </p>
-                <div class="card-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </a>
-
         </div>
     </section>
 
-    <!-- Section Compétences -->
+    <!-- Section Applications -->
     <section class="tech-stack" id="applications">
         <div class="section-header">
-            <h2 class="section-title">Applications </h2>
-            <p class="section-subtitle">Les différentes Intelligence Artificielle</p>
+            <h2 class="section-title">Applications</h2>
+            <p class="section-subtitle">Les principaux outils d'IA accessibles au grand public</p>
         </div>
 
         <div class="tech-grid">
             <div class="tech-item">
-                <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/gpt.jpg" alt="ChatGPT logo" class="logo-small">
+                <a href="https://chatgpt.com" target="_blank" rel="noopener" aria-label="ChatGPT">
+                    <img src="/img/chatgpt.jpg" alt="ChatGPT" class="logo-small">
                 </a>
-                    <span>ChatGPT</span>
-                <p> Société : OpenAI <br>
-                    <br>
-                    Pays : USA <br>
-                    <br>
-                    Type : LLM + LAM <br>
-                    <br>
-                    Année : 2015
-
+                <span>ChatGPT</span>
+                <p>Société : OpenAI<br>Pays : USA<br>Type : LLM / LMM<br>Année : 2022</p>
             </div>
             <div class="tech-item">
-                <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/gemini_logo.jpg" alt="ChatGPT logo" class="logo-small">
+                <a href="https://gemini.google.com/app" target="_blank" rel="noopener" aria-label="Gemini">
+                    <img src="/img/gemini.jpg" alt="Gemini" class="logo-small">
                 </a>
                 <span>Gemini</span>
-                <p> Société : Google <br>
-                    <br>
-                    Pays : USA <br>
-                    <br>
-                    Type : LMM <br>
-                    <br>
-                    Année : 2024
-
+                <p>Société : Google<br>Pays : USA<br>Type : LMM<br>Année : 2023</p>
             </div>
             <div class="tech-item">
-                <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/deepseek.jpg" alt="ChatGPT logo" class="logo-small">
+                <a href="https://www.deepseek.com" target="_blank" rel="noopener" aria-label="DeepSeek">
+                    <img src="/img/deepseek.jpg" alt="DeepSeek" class="logo-small">
                 </a>
-                <span>Deepseek</span>
-                <p> Société : DeepSeek-AI <br>
-                    <br>
-                    Pays : Chine <br>
-                    <br>
-                    Type : LLM <br>
-                    <br>
-                    Année : 2023
-                </p>
-
-
+                <span>DeepSeek</span>
+                <p>Société : DeepSeek-AI<br>Pays : Chine<br>Type : LLM<br>Année : 2023</p>
             </div>
-
             <div class="tech-item">
-                <a href="https://chat.mistral.ai/chat" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/mistral.jpg" alt="ChatGPT logo" class="logo-small">
+                <a href="https://chat.mistral.ai/chat" target="_blank" rel="noopener" aria-label="Mistral">
+                    <img src="/img/mistral.jpg" alt="Mistral" class="logo-small">
                 </a>
                 <span>Mistral</span>
-                <p> Société : Mistral AI <br>
-                    <br>
-                    Pays : France <br>
-                    <br>
-                    Type : LLM <br>
-                    <br>
-                    Année : 2024
-                </p>
-
+                <p>Société : Mistral AI<br>Pays : France<br>Type : LLM<br>Année : 2024</p>
             </div>
             <div class="tech-item">
-                <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">
-                    <img src="/img/claude.jpg" alt="ChatGPT logo" class="logo-small">
+                <a href="https://claude.ai/new" target="_blank" rel="noopener" aria-label="Claude">
+                    <img src="/img/claude.jpg" alt="Claude" class="logo-small">
                 </a>
                 <span>Claude</span>
-                <p> Société : Anthropic <br>
-                    <br>
-                    Pays : USA <br>
-                    <br>
-                    Type : LMM + LAM <br>
-                    <br>
-                    Année : 2023
-                </p>
-
-
+                <p>Société : Anthropic<br>Pays : USA<br>Type : LMM + LAM<br>Année : 2023</p>
             </div>
-
         </div>
     </section>
 
-    <!-- Section Contact -->
+    <!-- Section Impacts -->
     <section class="contact-section" id="impacts">
         <div class="section-header">
             <h2 class="section-title">Impacts sur la société</h2>
-            <p class="section-subtitle">Les différents impacts sur notre société actuelle et future</p>
+            <p class="section-subtitle">Les effets actuels et futurs de l'IA sur notre monde</p>
         </div>
-
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-user-tie"></i>
                     <div>
-                        <h3>La métamorphose du travail et des compétences</h3>
-                        <p>Chiffre clé : L'IA impacte environ 40 % des emplois mondiaux. En 2025, le salaire d'un employé maîtrisant l'IA est en moyenne 56 % supérieur à celui de ses pairs. <br>
-                            <br>
-                            Impact : On observe un passage massif du "faire" au "piloter". Les compétences les plus recherchées ne sont plus techniques, mais liées au jugement critique, à l'intelligence émotionnelle et à la capacité à diriger des agents IA.</p>
+                        <h3>La métamorphose du travail</h3>
+                        <p>L'IA impacte environ 40 % des emplois mondiaux. En 2025, le salaire d'un employé maîtrisant l'IA est en moyenne 56 % supérieur à celui de ses pairs. On observe un passage massif du « faire » au « piloter » : les compétences les plus recherchées sont désormais le jugement critique, l'intelligence émotionnelle et la capacité à diriger des agents IA.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-heartbeat"></i>
                     <div>
                         <h3>La révolution de la santé personnalisée</h3>
-                        <p>Chiffre clé : Le temps de découverte de nouveaux médicaments a été divisé par 10 grâce aux modèles biologiques. <br>
-                            <br>
-                            Impact : La médecine devient prédictive : on peut désormais détecter des signaux faibles de maladies (cancers, Alzheimer) plusieurs années avant l'apparition des premiers symptômes grâce à l'analyse croisée des historiques médicaux et de l'imagerie.</p>
+                        <p>Le temps de découverte de nouveaux médicaments a été divisé par 10 grâce aux modèles biologiques. La médecine devient prédictive : on peut désormais détecter des signaux faibles de maladies (cancers, Alzheimer) plusieurs années avant les premiers symptômes, grâce à l'analyse croisée des historiques médicaux et de l'imagerie.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-shield-alt"></i>
                     <div>
                         <h3>La crise de la vérité et de la confiance</h3>
-                        <p>Chiffre clé : Près de 95 % des interactions clients sont gérées par des IA, et une part croissante du contenu web est générée artificiellement. <br>
-                            <br>
-                            Impact : La prolifération des deepfakes et de la désinformation automatisée force les gouvernements à imposer des marquages numériques obligatoires (filigranes IA). La confiance devient une valeur rare et le "fact-checking" une compétence de survie citoyenne.</p>
+                        <p>Près de 95 % des interactions clients sont gérées par des IA, et une part croissante du contenu web est générée artificiellement. La prolifération des deepfakes force les gouvernements à imposer des marquages numériques obligatoires. La confiance devient une valeur rare et le fact-checking une compétence citoyenne essentielle.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-leaf"></i>
                     <div>
-                        <h3>L'urgence environnementale de l'IA</h3>
-                        <p>Chiffre clé : Une requête IA consomme environ 2 Wh (contre 0,3 Wh pour une recherche Google). La part des centres de données dans la consommation électrique mondiale pourrait doubler pour atteindre 4 % d'ici 2026. <br>
-                            <br>
-                            Impact : On assiste à une pression sociale et réglementaire pour passer aux Small Language Models (SLM), moins gourmands, et à une relocalisation des serveurs dans des zones où l'énergie est décarbonée.</p>
+                        <h3>L'urgence environnementale</h3>
+                        <p>Une requête IA consomme environ 2 Wh (contre 0,3 Wh pour une recherche Google). La part des centres de données dans la consommation électrique mondiale pourrait doubler pour atteindre 4 % d'ici 2026. On observe une pression sociale pour adopter les Small Language Models (SLM), moins énergivores.</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-graduation-cap"></i>
                     <div>
-                        <h3>L'éducation à l'heure de la personnalisation</h3>
-                        <p>Chiffre clé : 59 % des enseignants estiment que la meilleure approche combine l'humain et l'IA (donnée GoStudent 2025). <br>
-                            <br>
-                            Impact : L'IA permet un tutorat individuel de masse. Chaque élève peut avoir un assistant qui adapte les exercices à son rythme et à son mode de compréhension. En revanche, cela oblige à repenser totalement les examens, la mémorisation n'étant plus le critère principal de réussite..</p>
+                        <h3>L'éducation personnalisée</h3>
+                        <p>59 % des enseignants estiment que la meilleure approche combine l'humain et l'IA (GoStudent, 2025). L'IA permet un tutorat individuel de masse, adaptant les exercices au rythme de chaque élève. Cela oblige cependant à repenser entièrement les examens, la mémorisation n'étant plus le seul critère de réussite.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+
+    <!-- Section Avis des personnalités -->
     <section class="parcours-section" id="avis">
         <div class="section-header">
-            <h2 class="section-title">Les personnalités et l'Intelligence Artificielle</h2>
-            <p class="section-subtitle">Les impacts des personnalités sur l'IA</p>
+            <h2 class="section-title">Les personnalités et l'IA</h2>
+            <p class="section-subtitle">Comment les grandes figures de la tech envisagent l'intelligence artificielle en 2025</p>
         </div>
 
         <div class="parcours-grid">
-            <!-- Carte 1 : Elon Musk -->
+
+            <!-- Elon Musk -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">24 nov. 2025</div>
-                    <h3 class="parcours-title">Elon Musk (xAI / Tesla) : "L'AGI pour 2026"</h3>
+                    <h3 class="parcours-title">Elon Musk (xAI / Tesla) — « L'AGI pour 2026 »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Son avis : Toujours aussi audacieux, Musk a ajusté ses prédictions fin 2025. Il affirme désormais que l'IA dépassera l'intelligence humaine (AGI) dès 2026. Il voit en son modèle Grok-5 (prévu avec 6 billions de paramètres) le moteur de cette révolution.<br>
-                        <br>
-                        - Son impact : Il pousse pour une IA "curieuse" et sans filtres politiques, tout en maintenant qu'il existe un risque de 10 % que la technologie devienne incontrôlable.<br>
-                     </p>
+                        Toujours audacieux, Musk affirme fin 2025 que l'IA dépassera l'intelligence humaine (AGI) dès 2026. Il voit en son modèle Grok-5 (prévu avec 6 billions de paramètres) le moteur de cette révolution. Il prône une IA « curieuse » et sans filtres politiques, tout en maintenant qu'il existe un risque de 10 % que la technologie devienne incontrôlable.
+                    </p>
                     <div class="parcours-image-link">
-                        <a href="https://www.lebigdata.fr/elon-musk-predit-la-premiere-agi-pour-2026-mais-vient-de-perdre-sa-credibilite" target="_blank" class="image-link-wrapper">
+                        <a href="https://www.lebigdata.fr/elon-musk-predit-la-premiere-agi-pour-2026-mais-vient-de-perdre-sa-credibilite" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/musk.jpg" alt="Elon Musk" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
-                                <span>En savoir plus sur Elon Musk et l'IA</span>
+                                <span>Elon Musk et l'IA</span>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Carte 2 : Sam Altman -->
+            <!-- Sam Altman -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">23 juin 2025</div>
-                    <h3 class="parcours-title">Sam Altman (OpenAI) : "La vitesse du changement m'inquiète"</h3>
+                    <h3 class="parcours-title">Sam Altman (OpenAI) — « La vitesse du changement m'inquiète »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Son avis : Le patron d'OpenAI se montre plus nuancé en 2025. S'il croit fermement que l'IA va transformer l'économie entière, il avoue être préoccupé par la capacité d'adaptation des institutions. Pour lui, "poser les bonnes questions" devient plus important que de "connaître les réponses".<br>
-                        <br>
-                        - Son impact : Il oriente OpenAI vers les agents autonomes (modèles capables d'agir sur un ordinateur), estimant que c'est là que réside la véritable valeur ajoutée pour la société.<br>
+                        Le patron d'OpenAI se montre plus nuancé en 2025. S'il croit fermement que l'IA va transformer l'économie entière, il avoue être préoccupé par la capacité d'adaptation des institutions. Pour lui, « poser les bonnes questions » devient plus important que de « connaître les réponses ». Il oriente OpenAI vers les agents autonomes, estimant que c'est là que réside la véritable valeur ajoutée.
                     </p>
                     <div class="parcours-image-link">
-                        <a href="https://www.conseils-redaction-web.fr/le-patron-dopenai-sur-l-ia-en-2025" target="_blank" class="image-link-wrapper">
+                        <a href="https://www.conseils-redaction-web.fr/le-patron-dopenai-sur-l-ia-en-2025" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/altman.jpg" alt="Sam Altman" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -886,20 +711,18 @@
                 </div>
             </div>
 
-            <!-- Carte 3 : ELIZA -->
+            <!-- Bill Gates -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">29 oct. 2025</div>
-                    <h3 class="parcours-title">Bill Gates (Microsoft) : "La fin des pénuries de médecins et de profs"</h3>
+                    <h3 class="parcours-title">Bill Gates (Microsoft) — « La fin des pénuries de médecins et d'enseignants »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Son avis : Gates est le plus optimiste sur le plan social. En 2025, il considère l'IA comme la solution ultime aux pénuries mondiales de personnels de santé et d'enseignants. Il prédit que les humains seront éliminés de nombreuses tâches répétitives pour se concentrer sur l'empathie.<br>
-                        <br>
-                        - Son impact : Il prévient toutefois les jeunes générations : l'IA est une "menace effrayante" si elle n'est pas régulée pour réduire les inégalités mondiales plutôt que de les creuser.<br>
+                        Gates est le plus optimiste sur le plan social. En 2025, il considère l'IA comme la solution aux pénuries mondiales de personnels de santé et d'enseignants. Il prédit que les humains seront libérés des tâches répétitives pour se concentrer sur l'empathie. Il prévient toutefois : l'IA est une « menace effrayante » si elle n'est pas régulée pour réduire les inégalités plutôt que de les creuser.
                     </p>
                     <div class="parcours-image-link">
-                        <a href="https://odsc.medium.com/bill-gates-predicts-ai-will-replace-doctors-and-teachers-within-a-decade-c905eb951793" target="_blank" class="image-link-wrapper">
+                        <a href="https://odsc.medium.com/bill-gates-predicts-ai-will-replace-doctors-and-teachers-within-a-decade-c905eb951793" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/gates.jpg" alt="Bill Gates" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -910,22 +733,19 @@
                 </div>
             </div>
 
-            <!-- Carte 4 : Hivers de l'IA -->
+            <!-- Yann LeCun -->
             <div class="parcours-card">
                 <div class="parcours-header">
                     <div class="parcours-year">4 déc. 2025</div>
-                    <h3 class="parcours-title">Yann LeCun (Ex-Meta / Expert Indépendant) : "Les LLM sont une impasse"
-                    </h3>
+                    <h3 class="parcours-title">Yann LeCun (Expert indépendant) — « Les LLM sont une impasse »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Son avis : Le célèbre chercheur français a marqué 2025 en quittant Meta pour lancer sa propre structure. Sa position n'a pas changé : les modèles de langage actuels (LLM) ne pourront jamais atteindre une intelligence humaine car ils n'ont pas de bon sens physique.<br>
-                        <br>
-                        - Son impact : Il prône les "World Models", des IA capables de simuler et de comprendre le monde réel avant d'agir, une étape qu'il juge indispensable pour la robotique de demain.<br>
+                        Le chercheur français a marqué 2025 en quittant Meta pour lancer sa propre structure. Sa position est claire : les modèles de langage actuels (LLM) ne pourront jamais atteindre une intelligence humaine car ils manquent de bon sens physique. Il prône les « World Models », des IA capables de simuler et comprendre le monde réel avant d'agir — une étape qu'il juge indispensable pour la robotique de demain.
                     </p>
                     <div class="parcours-image-link">
-                        <a href="https://the-decoder.com/yann-lecun-leaves-meta-to-launch-new-ai-startup/" target="_blank" class="image-link-wrapper">
-                            <img src="/img/lecun.jpg" alt="Yann LeCun" class="parcours-img">
+                        <a href="https://the-decoder.com/yann-lecun-leaves-meta-to-launch-new-ai-startup/" target="_blank" rel="noopener" class="image-link-wrapper">
+                            <img src="/img/LeCun.jpg" alt="Yann LeCun" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Yann LeCun et l'IA</span>
@@ -935,20 +755,18 @@
                 </div>
             </div>
 
-            <!-- Carte 5 : Systèmes experts -->
+            <!-- Sundar Pichai -->
             <div class="parcours-card">
                 <div class="parcours-header">
-                    <div class="parcours-year">18 nov. 2025 </div>
-                    <h3 class="parcours-title"> Sundar Pichai (Google) : "Un changement plus profond que l'électricité"</h3>
+                    <div class="parcours-year">18 nov. 2025</div>
+                    <h3 class="parcours-title">Sundar Pichai (Google) — « Un changement plus profond que l'électricité »</h3>
                 </div>
                 <div class="parcours-body">
                     <p class="parcours-description">
-                        - Son avis : Pour le PDG de Google, 2025 est l'année où la recherche web change de nature. Il affirme que l'IA permet désormais de répondre à des questions "plus complexes que jamais" et que l'intégration de Gemini dans tout l'écosystème Android/Workspace rend l'IA invisible mais omniprésente.<br>
-                        <br>
-                        - Son impact : Il insiste sur la confiance : dans un monde inondé de contenus générés par IA, la valeur d'un moteur de recherche réside désormais dans sa capacité à filtrer le "vrai" du "faux".<br>
+                        Pour le PDG de Google, 2025 est l'année où la recherche web change de nature. L'IA permet désormais de répondre à des questions « plus complexes que jamais » et l'intégration de Gemini dans Android/Workspace rend l'IA invisible mais omniprésente. Il insiste sur la confiance : dans un monde inondé de contenus générés par IA, la valeur d'un moteur de recherche réside dans sa capacité à filtrer le vrai du faux.
                     </p>
                     <div class="parcours-image-link">
-                        <a href="https://fr.businessam.be/selon-sundar-pichai-lia-est-une-invention-encore-plus-profonde-que-la-decouverte-du-feu-et-cest-une-bonne-chose/" target="_blank" class="image-link-wrapper">
+                        <a href="https://fr.businessam.be/selon-sundar-pichai-lia-est-une-invention-encore-plus-profonde-que-la-decouverte-du-feu-et-cest-une-bonne-chose/" target="_blank" rel="noopener" class="image-link-wrapper">
                             <img src="/img/pichai.jpg" alt="Sundar Pichai" class="parcours-img">
                             <div class="image-overlay">
                                 <i class="fas fa-external-link-alt"></i>
@@ -959,7 +777,9 @@
                 </div>
             </div>
 
-            </section>
+        </div>
+    </section>
+
 </main>
 
 <!-- Footer -->
@@ -967,21 +787,33 @@
     <div class="footer-content">
         <div class="footer-section">
             <div class="footer-logo">
-                <i class="fas fa-code"></i>
-                <span>MD</span>
+                <svg class="logo-svg logo-svg--footer" viewBox="0 0 54 62" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="lg-ftr" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#10b981"/>
+                            <stop offset="100%" stop-color="#3b82f6"/>
+                        </linearGradient>
+                    </defs>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="url(#lg-ftr)" opacity="0.14"/>
+                    <polygon points="27,3 51,17 51,45 27,59 3,45 3,17" fill="none" stroke="url(#lg-ftr)" stroke-width="2.2"/>
+                    <polygon points="27,10 44,20 44,42 27,52 10,42 10,20" fill="none" stroke="url(#lg-ftr)" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+                    <text x="15" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#10b981" text-anchor="middle" dominant-baseline="central">M</text>
+                    <text x="39" y="36" font-family="'Roboto Mono',monospace" font-size="20" font-weight="700" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">D</text>
+                    <circle cx="27" cy="64" r="3" fill="#3b82f6"/>
+                </svg>
+                <span>Mathieu Dupressoir</span>
             </div>
-            <p class="footer-description">
-                Développeur full-stack passionné par la création de solutions
-                web innovantes et performantes.
-            </p>
+            <p class="footer-description">Veille technologique — BTS SIO SLAM.<br>Développeur passionné par l'IA et les technologies web.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                 </a>
-               
+                <a href="mailto:mathieu.dupressoir03@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
 
@@ -990,7 +822,9 @@
             <ul class="footer-links">
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#histoire">Histoire</a></li>
-                <li><a href="#modèles">Modèles</a></li>
+                <li><a href="#fonctionnement">Fonctionnement</a></li>
+                <li><a href="#disciplines">Disciplines</a></li>
+                <li><a href="#modeles">Modèles</a></li>
                 <li><a href="#applications">Applications</a></li>
                 <li><a href="#impacts">Impacts société</a></li>
                 <li><a href="#avis">Avis</a></li>
@@ -998,30 +832,29 @@
         </div>
 
         <div class="footer-section">
-            <h3 class="footer-title">Localisation</h3>
+            <h3 class="footer-title">Contact</h3>
             <ul class="footer-contact">
-                   <li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:mathieu.dupressoir03@gmail.com">mathieu.dupressoir03@gmail.com</a></span>
+                </li>
+                <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Compiegne, Amiens, France</span>
+                    <span>Compiègne, France</span>
+                </li>
+                <li>
+                    <i class="fas fa-arrow-left"></i>
+                    <span><a href="../index.html">Retour au portfolio</a></span>
                 </li>
             </ul>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025-2026 Portfolio Mathieu Dupressoir. Tous droits réservés.</p>
+        <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Veille Technologique BTS SIO SLAM</p>
     </div>
 </footer>
 
-<!-- Script JavaScript externe -->
 <script src="Veille_technologique.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
