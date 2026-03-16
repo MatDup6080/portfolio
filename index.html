@@ -449,7 +449,12 @@
             </div>
 
             <!-- Formulaire de contact -->
-            <form class="contact-form" id="contactForm" novalidate>
+            <!-- Formulaire de contact — Formspree -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xojkkrzo" method="POST" novalidate>
+                <!-- Email de destination -->
+                <input type="hidden" name="_replyto" value="mathieu.dupressoir03@gmail.com">
+                <!-- Anti-spam honeypot -->
+                <input type="text" name="_gotcha" style="display:none">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="contactName">Nom</label>
@@ -468,11 +473,18 @@
                     <label for="contactMessage">Message</label>
                     <textarea id="contactMessage" name="message" rows="5" placeholder="Votre message..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-submit">
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
                     <i class="fas fa-paper-plane"></i>
                     <span>Envoyer le message</span>
                 </button>
-                <p class="form-note">* Ce formulaire est à titre indicatif. Contactez-moi directement par email pour toute demande urgente.</p>
+                <div class="form-success" id="formSuccess" style="display:none">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Message envoyé ! Je te répondrai dès que possible.</span>
+                </div>
+                <div class="form-error" id="formError" style="display:none">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Une erreur est survenue. Réessaie ou contacte-moi directement par email.</span>
+                </div>
             </form>
         </div>
     </section>
